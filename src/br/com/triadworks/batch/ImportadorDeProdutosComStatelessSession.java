@@ -1,5 +1,6 @@
 package br.com.triadworks.batch;
 
+import org.apache.commons.lang.time.DurationFormatUtils;
 import org.hibernate.StatelessSession;
 import org.hibernate.Transaction;
 
@@ -27,7 +28,7 @@ public class ImportadorDeProdutosComStatelessSession {
 		long fim = System.currentTimeMillis();
 		long duracao = (fim - inicio);
 		
-		System.out.println("duração: " + duracao);
+		System.out.println("[com StatelessSession] duração: " + DurationFormatUtils.formatDuration(duracao, "mm'm'ss's'"));
 		
 	}
 	

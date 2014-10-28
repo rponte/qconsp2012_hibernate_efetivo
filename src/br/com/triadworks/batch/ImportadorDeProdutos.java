@@ -20,10 +20,10 @@ public class ImportadorDeProdutos {
 			Produto produto = new Produto("Produto #" + i);
 			session.save(produto);
 			System.out.println("Produto #" + i);
-			if (i % 100 == 0) {
-				session.flush();
-				session.clear();
-			}
+//			if (i % 100 == 0) {
+//				session.flush();
+//				session.clear();
+//			}
 		}
 		
 		tx.commit();
@@ -32,7 +32,7 @@ public class ImportadorDeProdutos {
 		long fim = System.currentTimeMillis();
 		long duracao = (fim - inicio);
 		
-		System.out.println("duração: " + DurationFormatUtils.formatDuration(duracao, "mm'm'ss's'"));
+		System.out.println("[com Session] duração: " + DurationFormatUtils.formatDuration(duracao, "mm'm'ss's'"));
 		
 	}
 	

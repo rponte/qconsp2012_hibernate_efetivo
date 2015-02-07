@@ -16,7 +16,7 @@ public class ImportadorDeProdutos {
 		Session session = HibernateUtils.getSession();
 		Transaction tx = session.beginTransaction();
 		
-		for ( int i=0; i < 100000; i++ ) {
+		for ( int i=0; i < 30000; i++ ) {
 			Produto produto = new Produto("Produto #" + i);
 			session.save(produto);
 			System.out.println("Produto #" + i);
